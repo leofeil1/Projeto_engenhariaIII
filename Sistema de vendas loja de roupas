@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+actor Vendedor as ac1
+actor Recepecionista as ac2
+actor Cliente as ac3
+actor Gerente as ac4
+rectangle "loja de roupas"{
+    (Registrar venda)
+    (Itens comprados)
+    (Calcular venda)
+    (capturar informaçao dos itens)
+    (codigo de barras)
+    (codigo do item)
+    (reduzir quantidade de itens)
+    (Registrar venda)
+    (Log in)
+    (exibir descriçao)
+}
+@enduml
