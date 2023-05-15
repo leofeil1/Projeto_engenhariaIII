@@ -1,0 +1,53 @@
+@startuml
+left to right direction
+skinparam packageStyle rect
+actor Cliente
+actor "Departamento de Vendas" as dv
+actor Produção
+actor "Almoxarifado e Estocagem" as ae
+actor "Setor de Recebimento e Distribuição" as srd
+actor Transportadora
+actor "Departamento Financeiro" as df
+actor "Gerenciador de qualidade" as gd
+
+rectangle "Sistema de Produção da Indústria de Concreto" {
+  usecase "Registrar Pedido" as UC1
+  usecase "Cancelar Pedido" as UC7
+  usecase "Escalonar Pedido" as UC2
+  usecase "Controlar Produção" as UC3
+  usecase "Gerenciar Estoque" as UC4
+  usecase "Gerenciar Transporte e Entrega" as UC5
+  usecase "Receber entrega" as UC9
+  usecase "Dar feedback sobre o item" as UC10
+  usecase "Receber Pagamento" as UC6
+  usecase "Registrar venda" as UC8
+  usecase "Receber feedback" as UC11
+
+
+  Cliente -- UC1
+  Cliente -- UC7 : extend
+  Cliente -- UC9
+  Cliente --UC10 : extend
+  UC1 -- dv
+  dv -- UC2
+  UC2 -- Produção
+  Produção -- UC3
+  UC3 -- ae
+  UC3 -- gd
+  UC4 -- Produção
+  UC4 -- ae
+  srd -- UC4
+  UC5 -- Transportadora
+  UC6 -- df
+  UC8 -- df
+  UC11 -- gd : include
+  
+
+  UC2 -- Produção : <<extend>>
+  UC4 -- Produção : <<extend>>
+  UC2 .> UC1 : <<include>>
+  Transportadora --> UC5 : <<include>>
+
+}
+
+@enduml
