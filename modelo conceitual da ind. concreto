@@ -1,0 +1,32 @@
+@startuml
+
+left to right direction
+skinparam packageStyle rect
+
+entity Cliente
+entity "Departamento de Vendas" as DepartamentoVendas
+entity Producao
+entity "Almoxarifado e Estocagem" as AlmoxarifadoEstocagem
+entity "Setor de Recebimento e Distribuição" as SetorRecebimentoDistribuicao
+entity Transportadora
+entity "Departamento Financeiro" as DepartamentoFinanceiro
+entity "Gerenciador de qualidade" as GerenciadorQualidade
+
+entity "Pedido" as Pedido
+entity "Item de Pedido" as ItemPedido
+entity "Entrega" as Entrega
+
+Cliente"1" --|> "*" Pedido : Realiza
+Pedido "1" --|> "*" ItemPedido : Contém
+Pedido --|> DepartamentoVendas : Enviado para
+Pedido --|> Producao : Requisitado para
+Pedido --|> Entrega : Associado a
+Entrega "1" --|> "*" SetorRecebimentoDistribuicao : Recebido por
+Entrega --|> Transportadora : Entregue por
+Pedido --|> DepartamentoFinanceiro : Pagamento associado
+Pedido --|> GerenciadorQualidade : Avaliado por
+ItemPedido --|> AlmoxarifadoEstocagem : Armazenado em
+Producao --|> AlmoxarifadoEstocagem : Utiliza
+Producao --|> GerenciadorQualidade : Avaliado por
+
+@enduml
