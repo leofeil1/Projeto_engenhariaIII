@@ -1,0 +1,42 @@
+Nome do caso de uso: Gerenciar Estoque na Indústria de Concreto
+
+Resumo: Este caso de uso descreve o processo de gerenciamento de estoque na indústria de concreto, incluindo a atualização do estoque de materiais e a reposição de itens quando necessário.
+
+Ator principal: Almoxarifado e Estocagem
+
+Interessados:
+- Almoxarifado e Estocagem: Responsável pelo gerenciamento do estoque de materiais.
+- Produção: Utiliza os materiais disponíveis no estoque para a produção de concreto.
+
+Pré-condições:
+- O sistema de produção está em funcionamento.
+- Existem materiais registrados no estoque.
+- As informações sobre os níveis de estoque são precisas e atualizadas.
+
+Fluxo principal de eventos:
+1. O Almoxarifado e Estocagem monitora regularmente os níveis de estoque disponíveis.
+2. O Almoxarifado e Estocagem verifica se os níveis de estoque estão abaixo do limite mínimo estabelecido.
+3. Se os níveis de estoque estiverem abaixo do limite mínimo:
+   3.1. O Almoxarifado e Estocagem identifica os materiais que precisam ser repostos.
+   3.2. O Almoxarifado e Estocagem verifica o fornecedor ou o sistema de aquisição para obter os materiais em falta.
+   3.3. O Almoxarifado e Estocagem cria um pedido de compra dos materiais necessários.
+   3.4. O Almoxarifado e Estocagem registra o pedido de compra no sistema.
+   3.5. O Almoxarifado e Estocagem encaminha o pedido de compra para o Departamento de Compras.
+4. O Departamento de Compras processa o pedido de compra e solicita a aquisição dos materiais junto ao fornecedor.
+5. O fornecedor envia os materiais solicitados.
+6. O Departamento de Compras recebe os materiais do fornecedor.
+7. O Departamento de Compras confirma o recebimento dos materiais no sistema.
+8. O Almoxarifado e Estocagem atualiza o estoque com os materiais recebidos.
+9. O Almoxarifado e Estocagem verifica se os níveis de estoque estão adequados após a atualização.
+10. O caso de uso é encerrado.
+
+Pós-condições:
+- O estoque é atualizado com os materiais recebidos.
+- O Departamento de Compras registra o recebimento dos materiais.
+- O Almoxarifado e Estocagem verifica se os níveis de estoque estão adequados.
+- O caso de uso é encerrado.
+
+Fluxos alternativos:
+- No passo 2, se os níveis de estoque estiverem acima do limite mínimo, nenhum pedido de compra é necessário.
+- No passo 3.1, se não houver materiais identificados para reposição, nenhum pedido de compra é criado.
+- No passo 4, se o fornecedor não puder fornecer os materiais solicitados, o Departamento de Compras busca alternativas de fornecimento ou toma as ações necessárias
