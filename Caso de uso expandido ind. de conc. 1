@@ -1,0 +1,57 @@
+Nome do caso de uso: Gerenciar Produção e Vendas na Indústria de Concreto
+
+Resumo: Este caso de uso descreve o processo de gerenciamento da produção e vendas na indústria de concreto, desde o registro do pedido até o recebimento do pagamento e feedback dos clientes.
+
+Ator principal: Cliente
+
+Interessados:
+- Cliente: Deseja registrar pedidos, receber entregas, fornecer feedback e efetuar o pagamento.
+- Departamento de Vendas: Responsável pelo registro de pedidos e escalonamento de pedidos.
+- Produção: Responsável por controlar a produção de concreto.
+- Almoxarifado e Estocagem: Responsável pelo gerenciamento do estoque de materiais.
+- Setor de Recebimento e Distribuição: Responsável pelo recebimento de entregas.
+- Transportadora: Responsável pelo transporte e entrega dos produtos.
+- Departamento Financeiro: Responsável por receber o pagamento dos pedidos.
+- Gerenciador de qualidade: Responsável por receber feedback dos clientes e garantir a qualidade dos produtos.
+
+Pré-condições:
+- O sistema de produção está funcionando corretamente.
+- O estoque de materiais está disponível.
+- A transportadora está disponível para realizar as entregas.
+- O cliente possui acesso ao sistema.
+
+Fluxo principal de eventos:
+1. O cliente solicita o registro de um pedido (UC1).
+2. O Departamento de Vendas registra o pedido no sistema.
+3. O Departamento de Vendas escalona o pedido para a Produção (UC2).
+4. A Produção controla a produção do concreto (UC3).
+5. A Produção verifica o estoque disponível no Almoxarifado e Estocagem (UC4).
+6. O Almoxarifado e Estocagem fornece os materiais necessários para a produção.
+7. A Produção inicia a produção do concreto.
+8. O Gerenciador de qualidade verifica a qualidade do concreto produzido.
+9. A Produção finaliza a produção do concreto.
+10. A Produção solicita à Transportadora o transporte e entrega do pedido (UC5).
+11. A Transportadora realiza o transporte e entrega do pedido.
+12. O cliente recebe a entrega e confirma o recebimento (UC9).
+13. O Departamento Financeiro recebe o pagamento do cliente (UC6).
+14. O Departamento Financeiro registra a venda (UC8).
+15. O Gerenciador de qualidade recebe feedback do cliente sobre o item entregue (UC11).
+16. O sistema registra o feedback do cliente.
+17. O Gerenciador de qualidade analisa o feedback e toma as ações necessárias.
+
+Pós-condições:
+- O pedido é registrado no sistema.
+- A produção do concreto é controlada e finalizada.
+- O estoque é atualizado.
+- A entrega do pedido é realizada com sucesso.
+- O pagamento é recebido.
+- A venda é registrada.
+- O feedback do cliente é registrado e analisado pelo Gerenciador de qualidade.
+
+Fluxos alternativos:
+- No passo 2, se o cliente decidir cancelar o pedido, o Departamento de Vendas cancela o pedido (UC7).
+- No passo 11, se a Transportadora não estiver disponível, o Departamento
+
+ de Vendas escalona o pedido para outra transportadora.
+- No passo 13, se o cliente não efetuar o pagamento, o Departamento Financeiro notifica o cliente sobre o pagamento pendente.
+- No passo 15, se o cliente não fornecer feedback, o Gerenciador de qualidade segue com as análises com base nas informações disponíveis.
